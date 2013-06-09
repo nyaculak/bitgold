@@ -1,0 +1,30 @@
+name: BitGold
+main: bitgold.BitGold
+version: 0.2.0
+
+commands:
+  money:
+    description: Check your current balance
+    usage: /<command>
+    permission: bitgold.money
+    permission-message: You don't have <permission>
+  deposit:
+    description:  Deposit money into your account
+    usage: /<command> [integer]
+    permission: bitgold.deposit
+    permission-message: You don't have <permission>
+  withdraw:
+    description: Withdraw money from your account
+    usage: /<command> [integer]
+    permission: bitgold.withdraw
+    permission-message: You don't have <permission>
+  transfer:
+    description: Transfer money from your account to another player's
+    usage: /<command> [player] [amount]
+    permission: bitgold.transfer
+    permission-message: You don't have <permission>
+  setbalance:
+    description: Specifically sets a player's BitGold balance
+    usage: /<command> [player] [amount]
+    permission: bitgold.setbalance
+    permission-message: You don't have <permission>

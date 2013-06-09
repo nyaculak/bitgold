@@ -1,0 +1,50 @@
+		/*
+		try {
+			if (args[0].equalsIgnoreCase("all")) {
+
+			} else if (args[0].equalsIgnoreCase("stack")) {
+				if (inventory.contains(new ItemStack(Material.GOLD_NUGGET, 64))) {
+					plugin.sql.open();
+					inventory.remove(new ItemStack(Material.GOLD_NUGGET, 64));
+					int oldNumNuggets = plugin.sql.query(
+							"SELECT nuggets FROM Accounts WHERE user_name='"
+									+ sender.getName() + "'").getInt(1);
+					int finalNumNuggets = oldNumNuggets + 64;
+					plugin.sql.query("UPDATE Accounts SET nuggets="
+							+ finalNumNuggets + " WHERE user_name='"
+							+ sender.getName() + "'");
+					plugin.sql.close();
+					sender.sendMessage(ChatColor.GREEN
+							+ "Your current balance is now " + ChatColor.GOLD
+							+ finalNumNuggets + " Gold Nuggets");
+					return true;
+				} else {
+					sender.sendMessage("You do not have a stack of gold nuggets in your inventory!");
+					return false;
+				}
+			} /*else if (args[0].equalsIgnoreCase("hand")) {
+				if (inventory.getItemInHand().getType() == Material.GOLD_NUGGET) {
+					plugin.sql.open();
+					inventory.remove(inventory.getItemInHand());
+					int oldNumNuggets = plugin.sql.query(
+							"SELECT nuggets FROM Accounts WHERE user_name='"
+									+ sender.getName() + "'").getInt(1);
+					int finalNumNuggets = oldNumNuggets + inventory.getItemInHand().getAmount();
+					plugin.sql.query("UPDATE Accounts SET nuggets="
+							+ finalNumNuggets + " WHERE user_name='"
+							+ sender.getName() + "'");
+					plugin.sql.close();
+					sender.sendMessage(ChatColor.GREEN
+							+ "Your current balance is now " + ChatColor.GOLD
+							+ finalNumNuggets + " Gold Nuggets");
+					return true;
+				} else {
+					sender.sendMessage("You do not have Gold Nuggets in your hand");
+				}
+				return true;
+			
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			sender.sendMessage("SQLite operation failed.  Could not change account balance");
+		} */
